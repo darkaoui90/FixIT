@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FixIt | Repair Management</title>
+</head>
+<body>
+
+  <main class="container">
+
+    <!-- Header -->
+    <header class="header">
+      <div class="brand">
+        <div class="brand-icon">F</div>
+        <div>
+          <h1>FixIt</h1>
+          <p>Repair Management System</p>
+        </div>
+      </div>
+      <span class="header-badge">Dashboard</span>
+    </header>
+
+    <!-- Repair Requests -->
+    <section class="card">
+
+      <div class="section-header">
+        <div>
+          <h2>Repair Requests</h2>
+          <p>Manage and track device repairs</p>
+        </div>
+        <span id="repairCount" class="count-badge">
+          0 repairs
+        </span>
+      </div>
+
+      <!-- Filter -->
+      <div class="filter-group">
+        <label for="statusFilter">Filter by status</label>
+        <select id="statusFilter">
+          <option value="tous">All repairs</option>
+          <option value="recu">Received</option>
+          <option value="en_cours">In Progress</option>
+          <option value="termine">Completed</option>
+        </select>
+      </div>
+
+      <!-- Repairs will be rendered here -->
+      <ul id="repairList" class="repair-list"></ul>
+
+      <!-- Empty state -->
+      <p id="emptyMessage" class="empty-message">
+        No repairs to display.
+      </p>
+
+    </section>
+
+    <!-- Add Repair -->
+    <section class="card">
+
+      <div class="section-header">
+        <div>
+          <h2>Add New Repair</h2>
+          <p>Register a new device for repair</p>
+        </div>
+      </div>
+
+      <form id="repairForm">
+
+        <div class="form-group">
+          <label for="deviceInput">Device Name</label>
+          <input
+            type="text"
+            id="deviceInput"
+            placeholder="e.g. Laptop, Phone, Printer"
+            required
+          >
+        </div>
+
+        <button type="submit" class="btn-primary">
+          + Add Repair
+        </button>
+
+      </form>
+
+    </section>
+
+    <footer class="footer">
+      FixIt - JavaScript Learning Project
+    </footer>
+
+  </main>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
